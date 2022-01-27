@@ -1,0 +1,42 @@
+html,
+body {
+	margin: auto;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background: #eee;
+	font-family: sans-serif;
+}
+
+select,
+input {
+	padding: 10px;
+	margin: 10px;
+}
+
+h1 {
+	margin: 0;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+form {
+	width: 80vw;
+	max-width: 500px;
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	background: white;
+}
+
+label::after {
+	content: ":";
+}
+
+input[name="result"] {
+	width: 80vw;
+	max-width: 1000px;
+	margin-top: 20px;
+}

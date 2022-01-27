@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<title>Ciputra UTM Campaign Creator</title>
+</head>
+<body>
+	<form>
+		<h1>Ciputra UTM Campaign Creator</h1>
+		<label>Website Link/Landing Page Link</label>
+		<input required type="text" name="url" placeholder="https://www.ciputra.com/promo_free_ppn_2022">
+
+		<label title="Unique name of the campaign, newsletter or post">Nama Promo Iklan</label>
+		<input required type="text" name="campaign" placeholder="Promo Free PPN">
+
+		<label>Sumber Iklan</label>
+		<select required name="type">
+			<option disabled>Select a campaign type or medium</option>
+			<option value="social_facebook">Facebook</option>
+			<option value="social_googlesem">Google SEM</option>
+			<option value="social_googlegdn">Google GDN</option>
+			<option value="social_instagram">Instagram</option>
+			<option value="social_twitter">Twitter</option>
+			<option value="social_tiktok">TikTok</option>
+			<option value="social_linkedin">LinkedIn</option>
+			<option value="social_youtube">YouTube</option>
+			<option value="portal_detik">Detik</option>
+			<option value="portal_kompas">Kompas</option>
+			<option value="portal_kontan">Kontan</option>
+			<option value="influencer_kol">Influencer</option>
+			<option value="email_generic">Email (generic)</option>
+			<option value="email_newsletter">Email Blast</option>
+		</select>
+
+		<input type="submit" value="Create campaign URL">
+	</form>
+
+	<input readonly onfocus="this.select();" onmouseup="return false;" type="text" name="result" placeholder="...">
+	<input id="copy" type="button" value="Copy">
+	<script src="assets/js/script.js"></script>
+</body>
+</html>
