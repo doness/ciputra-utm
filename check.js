@@ -19,3 +19,9 @@ function generate() {
   document.getElementById('result').style.display = 'block';
   document.getElementById('finalURL').textContent = finalUrl.replaceAll(' ','-')
 }
+
+$( document ).ready(function() {
+
+  new ClipboardJS('.btn');
+  
+  });

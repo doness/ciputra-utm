@@ -9,14 +9,29 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
+    
+    <link rel="icon" type="image/png" href="https://ciputra.link/content/cropped-favicon-ciputra-180x180-1-300x300.png" sizes="32x32" />
+
     <title>Campaign URL Builder</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+
+    <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(86714209, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); </script> <!-- /Yandex.Metrika counter -->
+    
+    <!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-WBDB69W');</script>
+		<!-- End Google Tag Manager -->
 </head>
 
 <body>
     <header>
         <div class="jumbotron">
             <div class="container">
-                <h1 class="display-5">Campaign URL Builder</h1>
+                <h1 class="display-5"><img src="https://www.ciputra.com/wp-content/uploads/2021/07/logo-ciputra-40.png" width="250px" height="100px" alt="Ciputra - The leading diversified property developers in Indonesia"></h1>
             </div>
         </div>
     </header>
@@ -40,13 +55,14 @@
                         <div class="input-group">
                             <select class="custom-select" id="source" required>
                                 <option selected value="">Select an option...</option>
-                                <option value="Google">Google</option>
-                                <option value="Facebook">Facebook</option>
-                                <option value="Instagram">Instagram</option>
+                                <option value="Google">Google 🔥</option>
+                                <option value="Facebook">Facebook 🔥</option>
+                                <option value="Instagram">Instagram 🔥</option>
                                 <option value="Twitter">Twitter</option>
                                 <option value="TikTok">TikTok</option>
-                                <option value="Detik">Detik</option>
-                                <option value="Kompas">Kompas</option>
+                                <option value="Detik">Detik 📰</option>
+                                <option value="Kompas">Kompas 📰</option>
+                                <option value="OLX">OLX 📰</option>
                                 <option value="Selebgram">Selebgram</option>
                                 <option value="Email">Email</option>
                                 <option value="Shorthand">Shorthand</option>
@@ -61,17 +77,21 @@
                         <div class="input-group">
                             <select class="custom-select" id="medium" required>
                                 <option selected value="">Select an option...</option>
-                                <option value="Post">Post</option>
-                                <option value="Tweet">Tweet</option>
-                                <option value="Video">Video</option>
-                                <option value="Story">Story</option>
+                                <option value="CPM">CPM 💰</option>
+                                <option value="CPC">CPC 💸</option>
                                 <option value="GDN">GDN</option>
-                                <option value="SEM">SEM</option>
+                                <option value="SEM">SEM 🔥</option>
                                 <option value="SmartAds">SmartAds</option>
                                 <option value="YouTube">YouTube</option>
-                                <option value="Story">Story</option>
-                                <option value="Story">Story</option>
-                                <option value="Story">Story</option>
+                                <option value="Post">Post 🔥</option>
+                                <option value="Story">Story 🔥</option>
+                                <option value="Video">Video</option>
+                                <option value="Swipeup">Swipeup</option>
+                                <option value="Marketplace">Marketplace 🔥</option>
+                                <option value="FormLeads">FormLeads 🔥</option>
+                                <option value="PaidAds">PaidAds 📰</option>
+                                <option value="Partner">Partner 📰</option>
+                                <option value="Tweet">Tweet</option>
                                 <option value="Newsletter">Newsletter</option>
                             </select>
                         </div>
@@ -169,12 +189,15 @@
             <div class="row">
                 <div class="col-md-8 col-sm-12">
                     <div id="result">
-                        <h2>UTM Link</h2>
+                        <h2>UTM Link/Final URL</h2>
                         <form>
                             <div class="form-group">
-                                <textarea class="form-control" id="finalURL" rows="6"></textarea>
+                                <textarea class="form-control" id="finalURL" rows="6" readonly></textarea>
                             </div>
 
+                            <br />
+
+                            <button type="button" class="btn btn-info btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#finalURL">Copy</button>
                         </form>
                     </div>
                 </div>
