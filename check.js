@@ -15,9 +15,6 @@ function generate() {
   + (term ? `&utm_term=${term}` : '') 
   + (content ? `&utm_content=${content}` : '');
   
-  shortURL = "https://ciputra.link/q/?u=" + finalUrl;
-  finalURL2 = shortURL;
-  
   document.getElementById('result').style.display = 'block';
   document.getElementById('finalURL').textContent = finalUrl.replaceAll(' ','-')
 }
