@@ -19,12 +19,12 @@
     <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(86714209, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); </script> <!-- /Yandex.Metrika counter -->
     
     <!-- Google Tag Manager -->
-		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-		})(window,document,'script','dataLayer','GTM-WBDB69W');</script>
-		<!-- End Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-WBDB69W');</script>
+	<!-- End Google Tag Manager -->
 </head>
 
 <body>
@@ -53,7 +53,10 @@
                         <label for="source">Source *</label>
                         <p class="error-message" id="sourceError"></p>
                         <div class="input-group">
-                            <select class="custom-select" id="source" required>
+                            <select class="custom-select" id="source-select" onchange="updateModels()">
+                                <option value="" disabled selected>Select an option...</option>
+                            </select> 
+                            <!--select class="custom-select" id="source" required>
                                 <option selected value="">Select an option...</option>
                                 <option value="Google">Google 🔥</option>
                                 <option value="Facebook">Facebook 🔥</option>
@@ -68,14 +71,17 @@
                                 <option value="Shorthand">Shorthand</option>
                                 <option value="Survey">Survey</option>
                                 <option value="Forum">Forum</option>
-                            </select>
+                            </select-->
                         </div>
                     </form>
                     <form>
                         <label for="medium">Medium *</label>
                         <p class="error-message" id="mediumError"></p>
                         <div class="input-group">
-                            <select class="custom-select" id="medium" required>
+                            <select class="custom-select" id="medium-select" onchange="updateConfigurations()">
+                                <option value="" disabled selected>Select an option...</option>
+                            </select>
+                            <!--select class="custom-select" id="medium" required>
                                 <option selected value="">Select an option...</option>
                                 <option value="CPM">CPM 💰</option>
                                 <option value="CPC">CPC 💸</option>
@@ -96,7 +102,7 @@
                                 <option value="Partner">Partner 📰</option>
                                 <option value="Tweet">Tweet</option>
                                 <option value="Newsletter">Newsletter</option>
-                            </select>
+                            </select-->
                         </div>
                     </form>
                     <form>
@@ -177,11 +183,14 @@
                     <form>
                         <label for="content">Content</label>
                         <div class="input-group">
-                            <select class="custom-select" id="content">
+                            <select class="custom-select" id="content-select">
+                                <option value="" disabled selected>Select an option...</option>
+                            </select> 
+                            <!--select class="custom-select" id="content">
                                 <option selected value="">Select an option...</option>
                                 <option value="Paid">Paid</option>
                                 <option value="Organic">Organic</option>
-                            </select>
+                            </select-->
                         </div>
                     </form>
                     <button onclick="generate()" class="btn btn-primary">Generate UTM</button>
@@ -202,6 +211,17 @@
 
                             <button type="button" class="btn btn-info btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#finalURL">Copy</button>
                         </form>
+                        
+                        <h3>Short URL</h3>
+                        <form>
+                            <div class="form-group">
+                                <textarea class="form-control" id="finalURL2" rows="6" readonly></textarea>
+                            </div>
+
+                            <br />
+
+                            <button type="button" class="btn btn-info btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#finalURL2">Copy</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -213,6 +233,8 @@
             <p class="text-muted">Copyright &copy; 2022 <a href="https://ciputra.link" target="_blank" style="text-decoration: none;">Ciputra.Link</a> </p>
         </div>
     </footer>
+
+    <script type="text/javascript">var key = "5263b20aba73d372014442510dfa8a82";</script><script type="text/javascript" src="https://ciputra.link/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
         </script>
