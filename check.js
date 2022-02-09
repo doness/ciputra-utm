@@ -28,9 +28,9 @@ $( document ).ready(function() {
 
 
 /**
- * Helper function for creating car
+ * Helper function for creating source
  **/
- function createCar(name, id) {
+ function crearteSource(name, id) {
   return {
     name: name,
     id: id,
@@ -40,18 +40,18 @@ $( document ).ready(function() {
 /**
  * Helper function for creating model
  **/
-function createModel(name, id, car) {
+function crearteMedium(name, id, source) {
   return {
     name: name,
     id: id,
-    car: car,
+    source: source,
   };
 }
 
 /**
  * Helper function for creating configuration
  **/
-function createConfiguration(name, id, model) {
+function createContent(name, id, model) {
   return {
     name: name,
     id: id,
@@ -84,126 +84,126 @@ function addOptions(select, options) {
 /**
  * Select elements references
  **/
-var carsSelect = document.getElementById('source-select');
+var sourcesSelect = document.getElementById('source-select');
 var modelsSelect = document.getElementById('medium-select');
 var configurationSelect = document.getElementById('content-select');
 
 /**
- * Available cars
+ * Available sources
  **/
-var cars = [
-  createCar('Google 🔥', 'Google'),
-  createCar('Facebook 🔥', 'Facebook'),
-  createCar('Instagram 🔥', 'Instagram'),
-  createCar('Twitter', 'Twitter'),
-  createCar('TikTok', 'TikTok'),
-  createCar('Detik 📰', 'Detik'),
-  createCar('Kompas 📰', 'Kompas'),
-  createCar('OLX 📰', 'OLX'),
-  createCar('Selebgram', 'Selebgram'),
-  createCar('Email', 'Email'),
-  createCar('Survey', 'Survey'),
-  createCar('Forum', 'Forum'),
+var sources = [
+  crearteSource('Google 🔥', 'Google'),
+  crearteSource('Facebook 🔥', 'Facebook'),
+  crearteSource('Instagram 🔥', 'Instagram'),
+  crearteSource('Twitter', 'Twitter'),
+  crearteSource('TikTok', 'TikTok'),
+  crearteSource('Detik 📰', 'Detik'),
+  crearteSource('Kompas 📰', 'Kompas'),
+  crearteSource('OLX 📰', 'OLX'),
+  crearteSource('Selebgram', 'Selebgram'),
+  crearteSource('Email', 'Email'),
+  crearteSource('Survey', 'Survey'),
+  crearteSource('Forum', 'Forum'),
 ];
 
 /**
  * Available models
  **/
 var models = [
-  createModel('CPM 💰', 'CPM', 'Google'),
-  createModel('CPC 💸', 'CPC', 'Google'),
-  createModel('SEM 🔥', 'SEM', 'Google'),
-  createModel('GDN', 'GDN', 'Google'),
-  createModel('YouTube', 'YouTube', 'Google'),
-  createModel('SmartAds', 'SmartAds', 'Google'),
-  createModel('Maps 🆕', 'Maps', 'Google'),
-  createModel('Discovery 🆕', 'Discovery', 'Google'),
-  createModel('Performance Max 🆕', 'Performance-Max', 'Google'),
-  createModel('CPM 💰', 'CPM', 'Facebook'),
-  createModel('CPC 💸', 'CPC', 'Facebook'),
-  createModel('Post 🔥', 'Post', 'Facebook'),
-  createModel('Story 🔥', 'Story', 'Facebook'),
-  createModel('Video', 'Video', 'Facebook'),
-  createModel('Swipeup', 'Swipeup', 'Facebook'),
-  createModel('Marketplace 🔥', 'Marketplace', 'Facebook'),
-  createModel('FormLeads 🔥', 'FormLeads', 'Facebook'),
-  createModel('CPM 💰', 'CPM', 'Instagram'),
-  createModel('CPC 💸', 'CPC', 'Instagram'),
-  createModel('Post 🔥', 'Post', 'Instagram'),
-  createModel('Story 🔥', 'Story', 'Instagram'),
-  createModel('Video', 'Video', 'Instagram'),
-  createModel('Swipeup', 'Swipeup', 'Instagram'),
-  createModel('FormLeads 🔥', 'FormLeads', 'Instagram'),
-  createModel('Tweet', 'Tweet', 'Twitter'),
-  createModel('Display', 'Display', 'Twitter'),
-  createModel('Video', 'Video', 'Twitter'),
-  createModel('Video', 'Video', 'TikTok'),
-  createModel('Seleb TikTok', 'Selebtok', 'TikTok'),
-  createModel('Display', 'Display', 'Detik'),
-  createModel('Artikel', 'Display', 'Detik'),
-  createModel('Display', 'Display', 'Kompas'),
-  createModel('Artikel', 'Display', 'Kompas'),
-  createModel('Display', 'Display', 'OLX'),
-  createModel('Artikel', 'Display', 'OLX'),
-  createModel('SwipeUp', 'SwipeUp', 'Selebgram'),
-  createModel('LinkBio', 'LinkBio', 'Selebgram'),
-  createModel('Newsletter', 'Newsletter', 'Email'),
-  createModel('Click', 'Click', 'Survey'),
-  createModel('Artikel', 'Artikel', 'Forum'),
+  crearteMedium('CPM 💰', 'CPM', 'Google'),
+  crearteMedium('CPC 💸', 'CPC', 'Google'),
+  crearteMedium('SEM 🔥', 'SEM', 'Google'),
+  crearteMedium('GDN', 'GDN', 'Google'),
+  crearteMedium('YouTube', 'YouTube', 'Google'),
+  crearteMedium('SmartAds', 'SmartAds', 'Google'),
+  crearteMedium('Maps 🆕', 'Maps', 'Google'),
+  crearteMedium('Discovery 🆕', 'Discovery', 'Google'),
+  crearteMedium('Performance Max 🆕', 'Performance-Max', 'Google'),
+  crearteMedium('CPM 💰', 'CPM', 'Facebook'),
+  crearteMedium('CPC 💸', 'CPC', 'Facebook'),
+  crearteMedium('Post 🔥', 'Post', 'Facebook'),
+  crearteMedium('Story 🔥', 'Story', 'Facebook'),
+  crearteMedium('Video', 'Video', 'Facebook'),
+  crearteMedium('Swipeup', 'Swipeup', 'Facebook'),
+  crearteMedium('Marketplace 🔥', 'Marketplace', 'Facebook'),
+  crearteMedium('FormLeads 🔥', 'FormLeads', 'Facebook'),
+  crearteMedium('CPM 💰', 'CPM', 'Instagram'),
+  crearteMedium('CPC 💸', 'CPC', 'Instagram'),
+  crearteMedium('Post 🔥', 'Post', 'Instagram'),
+  crearteMedium('Story 🔥', 'Story', 'Instagram'),
+  crearteMedium('Video', 'Video', 'Instagram'),
+  crearteMedium('Swipeup', 'Swipeup', 'Instagram'),
+  crearteMedium('FormLeads 🔥', 'FormLeads', 'Instagram'),
+  crearteMedium('Tweet', 'Tweet', 'Twitter'),
+  crearteMedium('Display', 'Display', 'Twitter'),
+  crearteMedium('Video', 'Video', 'Twitter'),
+  crearteMedium('Video', 'Video', 'TikTok'),
+  crearteMedium('Seleb TikTok', 'Selebtok', 'TikTok'),
+  crearteMedium('Display', 'Display', 'Detik'),
+  crearteMedium('Artikel', 'Display', 'Detik'),
+  crearteMedium('Display', 'Display', 'Kompas'),
+  crearteMedium('Artikel', 'Display', 'Kompas'),
+  crearteMedium('Display', 'Display', 'OLX'),
+  crearteMedium('Artikel', 'Display', 'OLX'),
+  crearteMedium('SwipeUp', 'SwipeUp', 'Selebgram'),
+  crearteMedium('LinkBio', 'LinkBio', 'Selebgram'),
+  crearteMedium('Newsletter', 'Newsletter', 'Email'),
+  crearteMedium('Click', 'Click', 'Survey'),
+  crearteMedium('Artikel', 'Artikel', 'Forum'),
 ];
 
 /**
  * Available configurations
  **/
 var configurations = [
-  createConfiguration('Paid', 'Paid', 'CPM'),
-  createConfiguration('Paid', 'Paid', 'CPC'),
-  createConfiguration('Paid', 'Paid', 'SEM'),
-  createConfiguration('Paid', 'Paid', 'GDN'),
-  createConfiguration('Paid', 'Paid', 'YouTube'),
-  createConfiguration('Paid', 'Paid', 'SmartAds'),
-  createConfiguration('Paid', 'Paid', 'Discovery'),
-  createConfiguration('Paid', 'Paid', 'Performance-Max'),
-  createConfiguration('Paid', 'Paid', 'Post'),
-  createConfiguration('Paid', 'Paid', 'Story'),
-  createConfiguration('Paid', 'Paid', 'Swipeup'),
-  createConfiguration('Paid', 'Paid', 'FormLeads'),
-  createConfiguration('Paid', 'Paid', 'Tweet'),
-  createConfiguration('Paid', 'Paid', 'Display'),
-  createConfiguration('Paid', 'Paid', 'Video'),
-  createConfiguration('Paid', 'Paid', 'Selebtok'),
-  createConfiguration('Paid', 'Paid', 'LinkBio'),
-  createConfiguration('Paid', 'Paid', 'Newsletter'), 
+  createContent('Paid', 'Paid', 'CPM'),
+  createContent('Paid', 'Paid', 'CPC'),
+  createContent('Paid', 'Paid', 'SEM'),
+  createContent('Paid', 'Paid', 'GDN'),
+  createContent('Paid', 'Paid', 'YouTube'),
+  createContent('Paid', 'Paid', 'SmartAds'),
+  createContent('Paid', 'Paid', 'Discovery'),
+  createContent('Paid', 'Paid', 'Performance-Max'),
+  createContent('Paid', 'Paid', 'Post'),
+  createContent('Paid', 'Paid', 'Story'),
+  createContent('Paid', 'Paid', 'Swipeup'),
+  createContent('Paid', 'Paid', 'FormLeads'),
+  createContent('Paid', 'Paid', 'Tweet'),
+  createContent('Paid', 'Paid', 'Display'),
+  createContent('Paid', 'Paid', 'Video'),
+  createContent('Paid', 'Paid', 'Selebtok'),
+  createContent('Paid', 'Paid', 'LinkBio'),
+  createContent('Paid', 'Paid', 'Newsletter'), 
 
-  createConfiguration('Organic', 'Organic', 'Post'),
-  createConfiguration('Organic', 'Organic', 'Story'),
-  createConfiguration('Organic', 'Organic', 'Swipeup'),
-  createConfiguration('Organic', 'Organic', 'FormLeads'),
-  createConfiguration('Organic', 'Organic', 'Tweet'),
-  createConfiguration('Organic', 'Organic', 'Display'),
-  createConfiguration('Organic', 'Organic', 'Video'),
-  createConfiguration('Organic', 'Organic', 'LinkBio'),
-  createConfiguration('Organic', 'Organic', 'Newsletter'),
+  createContent('Organic', 'Organic', 'Post'),
+  createContent('Organic', 'Organic', 'Story'),
+  createContent('Organic', 'Organic', 'Swipeup'),
+  createContent('Organic', 'Organic', 'FormLeads'),
+  createContent('Organic', 'Organic', 'Tweet'),
+  createContent('Organic', 'Organic', 'Display'),
+  createContent('Organic', 'Organic', 'Video'),
+  createContent('Organic', 'Organic', 'LinkBio'),
+  createContent('Organic', 'Organic', 'Newsletter'),
   
-  createConfiguration('Affiliate 🆕', 'Affiliate', 'Post'),
-  createConfiguration('Affiliate 🆕', 'Affiliate', 'Story'),
-  createConfiguration('Affiliate 🆕', 'Affiliate', 'Swipeup'),
-  createConfiguration('Affiliate 🆕', 'Affiliate', 'FormLeads'),
-  createConfiguration('Affiliate 🆕', 'Affiliate', 'Tweet'),
-  createConfiguration('Affiliate 🆕', 'Affiliate', 'Display'),
-  createConfiguration('Affiliate 🆕', 'Affiliate', 'Video'),
-  createConfiguration('Affiliate 🆕', 'Affiliate', 'Selebtok'),
-  createConfiguration('Affiliate 🆕', 'Affiliate', 'LinkBio'),
-  createConfiguration('Affiliate 🆕', 'Affiliate', 'Newsletter'),
+  createContent('Affiliate 🆕', 'Affiliate', 'Post'),
+  createContent('Affiliate 🆕', 'Affiliate', 'Story'),
+  createContent('Affiliate 🆕', 'Affiliate', 'Swipeup'),
+  createContent('Affiliate 🆕', 'Affiliate', 'FormLeads'),
+  createContent('Affiliate 🆕', 'Affiliate', 'Tweet'),
+  createContent('Affiliate 🆕', 'Affiliate', 'Display'),
+  createContent('Affiliate 🆕', 'Affiliate', 'Video'),
+  createContent('Affiliate 🆕', 'Affiliate', 'Selebtok'),
+  createContent('Affiliate 🆕', 'Affiliate', 'LinkBio'),
+  createContent('Affiliate 🆕', 'Affiliate', 'Newsletter'),
 ];
 
 /**
  * Updates models
  **/
 function updateModels() {
-  var selectedCar = carsSelect.value;
+  var selectedsource = sourcesSelect.value;
   var options = models.filter(function(model) {
-    return model.car === selectedCar;
+    return model.source === selectedsource;
   });
   
   removeOptions(modelsSelect);
@@ -225,6 +225,6 @@ function updateConfigurations() {
 }
 
 /**
- * Adds options to car select
+ * Adds options to source select
  **/
-addOptions(carsSelect, cars);
+addOptions(sourcesSelect, sources);
