@@ -53,7 +53,7 @@
                         <label for="source">Source *</label>
                         <p class="error-message" id="sourceError"></p>
                         <div class="input-group">
-                            <select class="custom-select" id="source-select" onchange="updateModels()">
+                            <select class="custom-select" id="source-select" onchange="updateModels()" required>
                                 <option value="" disabled selected>Select an option...</option>
                             </select> 
                             <!--select class="custom-select" id="source" required>
@@ -78,7 +78,7 @@
                         <label for="medium">Medium *</label>
                         <p class="error-message" id="mediumError"></p>
                         <div class="input-group">
-                            <select class="custom-select" id="medium-select" onchange="updateConfigurations()">
+                            <select class="custom-select" id="medium-select" onchange="updateConfigurations()" required>
                                 <option value="" disabled selected>Select an option...</option>
                             </select>
                             <!--select class="custom-select" id="medium" required>
