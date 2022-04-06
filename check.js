@@ -6,6 +6,7 @@ function generate() {
   campaign = document.getElementById('campaign').value;
   term = document.getElementById('term').value;
   content = document.getElementById('content-select').value;
+  ppURL = "https://ciputradevelopment.com/privacy-policy/";
 
   finalUrl = 
   (baseURL ? `${baseURL}` : '') 
@@ -14,9 +15,19 @@ function generate() {
   + (campaign ? `&utm_campaign=${campaign}` : '') 
   + (term ? `&utm_term=${term}` : '') 
   + (content ? `&utm_content=${content}` : '');
+
+  privacypolicy = 
+  (ppURL ? `${ppURL}` : '') 
+  + (source ? `?utm_source=${source}` : '') 
+  + (medium ? `&utm_medium=${medium}` : '') 
+  + (campaign ? `&utm_campaign=${campaign}` : '') 
+  + (term ? `&utm_term=${term}` : '') 
+  + (content ? `&utm_content=${content}` : '');
   
   document.getElementById('result').style.display = 'block';
   document.getElementById('finalURL').textContent = finalUrl.replaceAll(' ','-')
+
+  document.getElementById('privacypolicy').textContent = privacypolicy.replaceAll(' ','-')
 }
 
 $( document ).ready(function() {
@@ -116,10 +127,11 @@ var models = [
   crearteMedium('SEM 🔥', 'SEM', 'Google'),
   crearteMedium('GDN', 'GDN', 'Google'),
   crearteMedium('YouTube', 'YouTube', 'Google'),
-  crearteMedium('SmartAds', 'SmartAds', 'Google'),
+  crearteMedium('SmartAds 🔥', 'SmartAds', 'Google'),
   crearteMedium('Maps 🆕', 'Maps', 'Google'),
   crearteMedium('Discovery 🆕', 'Discovery', 'Google'),
   crearteMedium('Performance Max 🆕', 'Performance-Max', 'Google'),
+  crearteMedium('Sitelink 🆕', 'Sitelink', 'Google'),
   crearteMedium('CPM 💰', 'CPM', 'Facebook'),
   crearteMedium('CPC 💸', 'CPC', 'Facebook'),
   crearteMedium('Post 🔥', 'Post', 'Facebook'),
@@ -167,6 +179,7 @@ var configurations = [
   createContent('Paid', 'Paid', 'SmartAds'),
   createContent('Paid', 'Paid', 'Discovery'),
   createContent('Paid', 'Paid', 'Performance-Max'),
+  createContent('Paid', 'Paid', 'Sitelink'),
   createContent('Paid', 'Paid', 'Post'),
   createContent('Paid', 'Paid', 'Story'),
   createContent('Paid', 'Paid', 'Swipeup'),
